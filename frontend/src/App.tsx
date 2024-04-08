@@ -1,22 +1,16 @@
-import React from 'react';
-import './App.css';
-import {BrowserRouter as Router,Route,Switch} from 'react-router-dom';
 import { createBrowserRouter ,RouterProvider} from 'react-router-dom';
-import Signup from './signup.tsx';
-import Signin from './signin.tsx';
+import Signup from './pages/signup.tsx';
+import Signin from './pages/signin.tsx';
 
 
 const App = ()=>{
  
  const router =  createBrowserRouter([
-    {path:"/sign-in",element:<Signin/>},
-    {path:"/sign-up",element:<Signup/>}
+    {path:"/signin",element:<Signin/>},
+    {path:"/signup",element:<Signup/>}
   ])
 
   return (
-   
-  
-
         <>
         <RouterProvider router={router}/>
         </>
