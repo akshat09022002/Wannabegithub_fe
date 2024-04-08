@@ -1,15 +1,25 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import React from 'react';
+import './App.css';
+import {BrowserRouter as Router,Route,Switch} from 'react-router-dom';
+import { createBrowserRouter ,RouterProvider} from 'react-router-dom';
+import Signup from './signup.tsx';
+import Signin from './signin.tsx';
 
-function App() {
-  const [count, setCount] = useState(0)
+
+const App = ()=>{
+ 
+ const router =  createBrowserRouter([
+    {path:"/sign-in",element:<Signin/>},
+    {path:"/sign-up",element:<Signup/>}
+  ])
 
   return (
-   <div>
-    hello world
-   </div>
+   
+  
+
+        <>
+        <RouterProvider router={router}/>
+        </>
   )
 }
 
