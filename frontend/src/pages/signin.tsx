@@ -14,7 +14,7 @@ function Signin() {
 			<div className="mb-4">
 				<label className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">Password</label>
 				<input type="password" id="password" className="shadow-sm rounded-md w-full px-3 py-2 border border-gray-300 focus:outline-none focus:ring-indigo-500 focus:border-indigo-500" placeholder="Enter your password" required></input>
-				<a href="#"
+				<a href="/forgot-password"
 					className="text-xs text-gray-600 hover:text-indigo-500 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">Forgot
 					Password?</a>
 			</div>
