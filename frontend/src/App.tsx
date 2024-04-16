@@ -1,26 +1,24 @@
-import { createBrowserRouter ,RouterProvider} from 'react-router-dom';
+import { BrowserRouter,Route, Routes} from 'react-router-dom';
 
-import Signup from './signup.tsx';
-import Signin from './signin.tsx';
-import Forgot from './forgot.tsx';
+import Signup from './pages/signup.tsx';
+import Signin from './pages/signin.tsx';
+import Verify from './pages/verify.tsx';
 
 
 
 const App = ()=>{
  
- const router =  createBrowserRouter([
 
-    {path:"/sign-in",element:<Signin/>},
-    {path:"/sign-up",element:<Signup/>},
-    {path:"/forgot-password",element:<Forgot/>}
-
-  ])
 
   return (
   
-        <>
-        <RouterProvider router={router}/>
-        </>
+       <BrowserRouter>
+       <Routes>
+       <Route path='/' Component={Signup}></Route>
+       <Route path='/signin' Component={Signin}></Route>
+       <Route path='/verify' Component={Verify}></Route>
+       </Routes>
+       </BrowserRouter>
   )
 }
 
