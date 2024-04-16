@@ -1,6 +1,8 @@
+import axios from "axios";
+import { useNavigate } from "react-router-dom";
 
 function Signup() {
- 
+ const navigate= useNavigate();
 
 return (
     <div className="min-h-screen flex items-center justify-center w-full dark:bg-gray-950">
@@ -44,7 +46,11 @@ return (
 			<button onClick={()=>{
 				alert("this is the signup route");
 			}} type="submit" className="w-full flex justify-center py-2 px-4 border border-transparent rounded-md shadow-sm text-sm font-medium text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">Sign Up</button>
-		</form>
+			</form>
+			<button onClick={async ()=>{
+				window.location.href= "http://localhost:46815/api/v1/user/auth/google";
+			}} type="submit" className="w-full flex justify-center mt-2 py-2 px-4 border border-transparent rounded-md shadow-sm text-sm font-medium text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">Signin with Google</button>
+		
 	</div>
 </div>
   )
